@@ -38,8 +38,7 @@ const updateRatings = async () => {
                     else if (rate >= 1.5) existingRatings.poor += count;
                     else existingRatings.terrible += count;
 
-                    console.log(existingRatings);
-                    // await existingRatings.save();
+                    await existingRatings.save();
                 }
                 // If ratings don't exist, create a new document with the ratings
                 else {
@@ -58,8 +57,7 @@ const updateRatings = async () => {
                     else if (rate >= 1.5) newRatings.poor += count;
                     else newRatings.terrible += count;
 
-                    console.log(newRatings);
-                    // await newRatings.save();
+                    await new Rating(newRatings).save();
                 }
             }
         });

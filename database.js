@@ -1,8 +1,9 @@
 const mysql = require("mysql");
+const mongoose = require("mongoose");
 require("dotenv").config();
 
 module.exports = mySQLConnect();
-// mongoDBConnect()
+mongoDBConnect();
 
 function mySQLConnect() {
     try {
